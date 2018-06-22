@@ -1,0 +1,41 @@
+{
+    "name": "debug-vscode-mac-touchbar",
+    "displayName": "debug-vscode-mac-touchbar",
+    "description": "Provide easy access debugging configurations on the MacBook Pro Touch Bar.",
+    "version": "0.0.1",
+    "publisher": "EricJulius",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/dwats/debug-vscode-mac-touchbar"
+    },
+    "bugs": {
+        "url": "https://github.com/dwats/debug-vscode-mac-touchbar/issues"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.sayHello"
+    ],
+    "main": "./extension",
+    "contributes": {
+        "commands": [{
+            "command": "extension.sayHello",
+            "title": "Hello World"
+        }]
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "eslint": "^4.11.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
